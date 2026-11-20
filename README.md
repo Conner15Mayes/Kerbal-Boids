@@ -1,13 +1,12 @@
 # Kerbal-Boids
 A ksp mod that add boids and space whales to the kerbal system.
 
-
+Adapted code or logic will be credited here.
 
 Most fish textures will be edited.
 
 Credit to the artists found on sketchfab under Creative Commons Attribution. 
 http://creativecommons.org/licenses/by/4.0/
-
 Ocean Creature https://skfb.ly/oAG8Q by bast_yy
 
 Angler Fish Creature (Pamuya) https://skfb.ly/QVpr by Ray
