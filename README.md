@@ -3,4 +3,5 @@ A ksp mod that add boids and space whales to the kerbal system.
 
 
 
-Credits to 3d artists 
+Most space fish textures have been edited to some extent.
+Credit to the artists.
