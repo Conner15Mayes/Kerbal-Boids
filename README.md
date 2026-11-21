@@ -1,5 +1,5 @@
 # Kerbal-Boids
-**A ksp mod that add boids and space whales to the kerbal system.**
+**A ksp mod that adds an ecology with boids, predators, and space whales to the kerbal system.**
 
 *In active development Adapted code or logic will be credited. Most fish textures will be edited.*
 
