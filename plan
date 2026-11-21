@@ -1,0 +1,29 @@
+what's needed
+    system for the boids flyby between planets start must be precalulated/prebaked until one cycle is done, then it does it again
+    laythe goes gas gaint ends laythe
+    system for prediores stalking/flyby
+    system for optimizing/ knowing how many things are in/ should be in boid including population changes (not exponetial)
+    add atmosphere to minmus
+    algae bloom around kerbin/eve/laythe/Tekto/minmus/Thatmo
+        how to do it and keep 100+ fps on older igpu options based on distance
+        Stacked Shell Layers
+        Parallax / Pom-Mapped Meshes
+        Camera-Facing Sprite Clusters
+        Vertex-Displaced Subdivision Blobs
+        Impostor / Octahedral Billboards
+
+fish life cycle
+    preditors
+    stalk general paths from boids
+        angler-fish start on laythe stalk go back to laythe
+        alien-fish-animated start on minmus
+        magnapinna-squid start Tekto
+    prey/boids
+     all boids fish start on eve and leave to jool/Sarnus/Urlum/Neidon, they mate and go back to eve to lay eggs may visit any other planet along the way for flybys kerbin/minus/laythe/Tekto/dres more likely to be visited
+        fish-low-poly
+        guppy-fish
+        betta-fish
+        paracheirodon-innesi--tetra-neon
+    whales
+        ocean-creature
+        whisker-whale
