@@ -4,13 +4,14 @@ what's needed
     system for prediores stalking/flyby
     system for optimizing/ knowing how many things are in/ should be in boid including population changes (not exponetial)
     add atmosphere to minmus
-    algae bloom around kerbin/eve/laythe/Tekto/minmus/Thatmo
+    algae bloom start and move between kerbin/eve/laythe/Tekto/minmus/Thatmo
         how to do it and keep 100+ fps on older igpu options based on distance
         Stacked Shell Layers
         Parallax / Pom-Mapped Meshes
         Camera-Facing Sprite Clusters
         Vertex-Displaced Subdivision Blobs
         Impostor / Octahedral Billboards
+    algea blooms change coloe based on where they just came from
 
 fish life cycle
     preditors
