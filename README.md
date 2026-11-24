@@ -3,8 +3,18 @@
 
 *In active development Adapted code or logic will be credited. Most fish textures will be edited.*
 
+### Dependencies
+ModuleManager  
+Outer Planets Mod  
+Atmospheric Minmus 
+
+### Incompatible  
+Real Solar System
+
+
 # Credits
-Credit to the artists found on sketchfab under Creative Commons Attribution. 
+### Adapted code and logic
+### Credit to the artists found on sketchfab under Creative Commons Attribution. 
 http://creativecommons.org/licenses/by/4.0/
 
 Ocean Creature https://skfb.ly/oAG8Q by bast_yy  
