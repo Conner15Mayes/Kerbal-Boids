@@ -1,0 +1,203 @@
+What's needed
+    How boids interact with vessels, whales, jellyfish, and predators
+        Vessels: boids mostly ignore, just swim around engoulfing visualy never get clsoe enough to break solar pannels
+        Whales: ignore but dont engoulf
+        Jellyfish: ignore but dont engoulf
+        Predators: boids flee
+    System for the boids' flyby between planets: the start must be precalculated/prebaked until one cycle is done, then it does it again
+        Bake again after each life cycle, once the fish are back home
+    planet/moon w/ atmosphere -> gas giant -> ends at place where ist started
+    System for predators stalking/flyby
+        Predators need the same bake after each cycle, once they're back home
+    Predator hunting - more for looks, no real system
+    system for knowing boids path after they have been observed via telescope
+        -if observed via telescope only know path to next destination including flybys
+        -if observed via crew report/ eva report know entire path for cycle
+    System for optimizing/knowing how many things are in/should be in a boid flock, including population changes (not exponential)
+    Add comet trial to Minmus
+        - atmosphereic minmus is dependency
+    How will the boids be simulated: GPU, CPU, or case by case?
+    System for graphics sliders/how many fish
+    Whales likely to meet each other in algae blooms
+    Do fish go to the surface?
+        Implied with eggs, but should a system be added?
+    What happens in a gas giant?
+    different lods need to be made for each animal
+    scanner/kerbnet required in medium to low polar orbit to see where boids are in gas giant
+    Ecology tracking system
+        Use the normal tracking station or have a separate one?
+        Telescopes used to find fish
+    New science reports
+        **Kerbals must have giant smiles when near any of the space fish**
+        Being in/near boids
+        Two boids crossing paths: only likely in near orbit or inside a gas giant
+        Watching predators hunt
+        Whale near a boid
+        Two whales meeting
+        Watching whales eat algae
+        Being near two predators crossing paths
+            System to make this more likely depending on the planet nearby
+        Jellyfish sample
+        Jellyfish tree samples
+        Different egg samples
+        in atmosphere boid crew report including gas giants
+        scanner report
+        eva reports for all
+        crew reports for all
+        new part for kindnapping fish only works when vessel incased in boid
+        whale barnicle sample
+    Algae blooms
+         start and move between Kerbin/Eve/Laythe/Tekto/Minmus/Thatmo
+            How to do it and keep 100+ fps on older iGPU options, based on distance
+            Stacked Shell Layers
+            Parallax / POM-Mapped Meshes
+            Camera-Facing Sprite Clusters
+            Vertex-Displaced Subdivision Blobs
+            Impostor / Octahedral Billboards
+        Algae blooms change color based on where they just came from
+            First number is main color second and third texure accents and then the texture uses all sorts of differet hue (this is for keeping in mind when making the textures not used for code)
+            Moho - #457eba, #b94678, #7dbc43
+            Eve - #35ca5f, #6132cd, #ce6331
+                Gilly -  #457eba, #b94678, #7dbc43
+            Kerbin - #d8275d, #2257dd, #62de21
+                Mun - #778878, #77758a, #897a76
+                Minmus - #a55a98, #5894a7,
+            Duna - #23b4dc, #da25b4, #afdb24
+                Ike - #778878, #77758a, #897a76
+            Dres - #778878, #77758a, #897a76
+            Jool - #1c19e6, #e41c1b, #1be425
+                    or #e41bcb, #cddf20, #1ccae3
+                Laythe
+                Vall
+                Tylo
+                Bop
+                Pol
+            Sarnus
+                Hale
+                Ovok
+                Eeloo
+                Slate
+                Tekto
+            Urlum
+                Polta
+                Priax
+                Wal
+                Tal 
+            Neidon
+                Thatmo
+                Nisse
+            Plock
+                Karen
+        Algae bloom picks random planet goes to planets moon the bakes 5 flybys does them bakes then next 5 so on, so fourth
+        only 10 algae blooms
+    orbit fish baking (if a system to make this happen smoothly in background isnt possible)
+        only happens in 
+            map view
+            tracking station 
+            the screen where you see the vab space plane hangar and all the other buildings
+        paueses at a higher timewarp to be determined
+        can it happen in the background or will it cause the computer to stutter
+            does it depend on computer if so add toggle
+        should a system be made so each cycle only beings at the same time and the end of each cycle is made to kinda fit together so the popup for orbital baking doesnt become anyooing
+    fish number modifier, i have no idea how much this will effect perfromance so any number with x will have a modifier, thats more of a 0.1 to 5 in increments of 0.1 and when its inbetween two numbers have it randomly pick between the two
+
+
+
+Fish life cycle
+    Predators
+    Stalk general paths from boids
+    will go to any gas giant (that boids go to) to stalk waiting for boids
+        p2-angler-fish 
+            species 1 p2.0    
+                start on Laythe, stalk, go back to Laythe
+            species 2 p2.1
+                stay on minmus at most high orbit and stalk
+            species 3 p2.2
+                stay on minmus at most high orbit and stalk
+                have chance to mistake vessel 
+        p1-alien-fish-animated start on Minmus, stalk, go back to Minmus
+        p3-magnapinna-squid 
+            start on Tekto do a flyby of at least 5 at most 7 planets go back home stay in atmosphere go back
+            only 2 per save on x modifier
+    Prey/boids
+     All boid fish start on Kerbin/Eve/Laythe/Tekto/Minmus and leave to Jool/Sarnus/Urlum/Neidon. They mate and go back to Eve to lay eggs. They may visit any other planet along the way for flybys.
+     To be determined: which boids go where, and should OPM be a dependency?
+        b2-fish-low-poly 
+            species 1 b2.0
+                start laythe go 2 to 5 flybys to Sarnus 
+                Sarnus high orbit until another boid of same species shows up 
+                then low orbit for 1 in game kerbal week then into atmosphere for 1 week 
+                back to laythe 2 to 5 flybys
+                2x boids start on surface going between water and atmosphere stay for about 4 months ones leave the other waits another year and then leaves
+                cycle repets
+            species 2 b2.1
+                different texture
+                start at tekto
+                3x boids hang around in atmosphere for 3 month then they all pick different Sarnus moons as destination
+                when the same species happens to be in the soi of the same moon boids forget main destination meet becoming one boid
+                then back to tekto
+            species 3/4 b2.2/b2.3
+                do same thing just different textures
+                start laythe go to tlyo and then bop using flyby system then go back to laythe
+        b3-guppy-fish 
+            Tekto 3 to 4 flybys to jool flyby go to laythe
+            wait in high laythe orbit for another boid of same species then enter laythe orbit
+            go down to jool for 3 in game months
+            3 to 4 flybys to back to Tekto
+            next cycle 3x boids start and each stays in low tekto orbit for 3 months one leaves and the rest leave 3 to 4 months after
+        b1-betta-fish
+            only one very large boid (if applicable)
+            Tekto 3 to 4 flybys go to Neidon high orbit
+            go down to Neidon for 3 in game months
+            3 to 4 flybys to back to Tekto
+        b4-paracheirodon-innesi--tetra-neon
+            species 1 b4.0 
+                start minmus 3x boids in stay swim/float close to ground
+                after 1 in game year they either go directly to kerbin's poles
+                once at kerbins pole's they find each other go back to minmus split up into 2x or 3x boids go back to different minmus flats and cycle repets
+             species 2 b4.1
+             2x boids that stay in low minmus orbit/minmus highlands 
+        
+    Whales
+        ocean-creature 
+            dont start in solar system
+            7 different textures
+            only 5 max in system
+            one will randomly enter from deep space outside solar system and if its full the another one randomly picked will leave and "despawn"
+            only show up every 50 to 100 in game years
+            follow a algea bloom
+        whisker-whale
+            only 3 in system
+            each gets different texture
+            all choose algea bloom to follow for 6 to 8 different plant vists then choose another one to go to 
+            algea bloom followd for 
+            curious visits space stations
+                space station's parent body so a space station orbit layther it would be jool becomes target
+                visits by gettin like 100 meters away
+                spooked when vessel gets to close
+                spooked by engine igition
+                not spooked by kerbal or kerbal's eva pack
+                movement slows down alot when kerbal nearby almost still
+
+    Jellyfish
+        for now all jelly fish aimlessly wander (execpt dancng jelly tree)
+            pick random body as target 
+            bake path go stay in low orbit for a year
+            pick next target body
+            if body is a moon parent body set as target
+        comb-jellyfish
+        dancing-jelly-tree on Minmus, Tekto, and magic asteroids (don't use Parallax, use the game's built-in scatter)
+        marrusdeep-sea-jellyfish
+        self-luminous-being (likely to be removed)
+    Eggs
+        all part of ground scatter so parallax doesn't become a dependency
+        e1-alien-eggs
+            found on laythe
+        e2-egg-of-rock
+            found on eve
+        e3-monster-eggs
+            found on tekto
+        e4-stone-egg
+            found on minmus
+             always 4 to 5 on magic asteriods
+
