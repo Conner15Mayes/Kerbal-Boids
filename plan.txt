@@ -182,9 +182,11 @@ Fish life cycle
     Jellyfish
         for now all jelly fish aimlessly wander (execpt dancng jelly tree)
             pick random body as target 
-            bake path go stay in low orbit for a year
+            bake path go to target
+            stay in low orbit for a year
             pick next target body
-            if body is a moon parent body set as target
+            if target body is a moon parent body set as target
+            repete
         comb-jellyfish
         dancing-jelly-tree on Minmus, Tekto, and magic asteroids (don't use Parallax, use the game's built-in scatter)
         marrusdeep-sea-jellyfish
